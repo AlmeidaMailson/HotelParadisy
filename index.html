@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Paradiso</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="logo">Hotel Paradiso</h1>
+        <nav class="nav">
+            <a href="#home">Home</a>
+            <a href="#quartos">Quartos</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#reservas">Reservas</a>
+        </nav>
+    </header>
+
+    <section  id="home" class="banner">
+        <div class="banner-content">
+            <h2>Bem Vindo ao Hotel Paradiso</h2>
+
+            <p>sua experiência única de hospedagem</p>
+            <button class="btn-reserva" onclick="scrollToReservas()"> Fazer Reserva</button>
+        </div>
+    </section>
+    <!--seçao de quartos-->
+    <section id="quartos" class="quartos">
+        <h2>Nossos Quartos</h2>
+        <div class="quartos-grid">
+            <div class="quarto-card">
+                <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304" alt="quartos standard">
+                <h3>Quartos Standard</h3>
+                <p>Conforto e qualidade para sua estadia</p>
+                <p class="preco">R$ 120,00 / diária </p>
+            </div>
+            
+            <div class="quarto-card">
+                <a href="quartoLuxo.html"><img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b"  alt="Quaro de luxo" ></a>
+                <h3>Quarto de luxo</h3>
+                <p>experiência premium com vista privilegiada</p>
+                <p class="preco">R$ 210,00 / diária</p>
+            </div>
+
+            <div class="quarto-card">
+                <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39" alt="Suite presidencial">
+                <h3>Suite Presidencial</h3>
+                <p>O maximo e sostificaçao e Conforto</p>
+                <p class="preco">R$ 580,00 / diária</p>
+            </div>
+        </div>
+    </section>
+    <!--seçao de serviços-->
+    <section id="servicos" class="servicos">
+        <h2>Nossos Serviços</h2>
+        <div class="servicos-grid">
+            <div class="servico-item">
+                <h3>Restaurante</h3>
+                <p> Gastrônomia Internacional</p>
+            </div>
+            <div class="servico-item">
+                <h3>Piscina</h3>
+                <p>Área de lazer completa</p>
+            </div>
+            <div class="servico-item">
+                <h3>Spa</h3>
+                <p>Relaxamaneto e bem-estar</p>
+            </div>
+        </div>
+    </section>
+
+    <!--serçao de reservas-->
+
+    <section id="reservas" class="reservas">
+        <h2>Faça sua reserva</h2>
+        <form id="formulario-reserva">
+            <input type="text"placeholder="Nome" required>
+            <input type="email" placeholder="Email" required>
+            <select id="tipo-quarto" required>
+                <option value="">selecione o tipo de quarto</option>
+                <option value="standard">Quarto Standard - R$ 120,00/dia</option>
+                <option value="luxo">Quarto de luxo - R$ 210,00/dia</option>
+                <option value="presidencial">Quarto presidencial - R$ 580,00/dia</option>
+            </select>
+            <div class="datas-container">
+                <div class="data-field">
+                    <label for="data-chegada">Data da Chegada</label>
+                    <input type="date" id="data-chegada" required>
+                </div>
+                <div class="data-field">
+                    <label for="data-saida">Data da Saida</label>
+                    <input type="date" id="data-saida" required>
+                </div>
+            </div>
+            <div id="resumo-reserva" class="resumo-reserva">
+                <p>Quantidade de dias: <span id="qtd-dias">0</span></p>
+                <p>Valor total: <span id="valor-total">R$ 0,00</span></p>
+            </div>
+            <textarea placeholder="Observações" rows="4"></textarea>
+            <button type="submit">Confirmar Reserva </button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <p>&copy;2025 Hotel Paradiso. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

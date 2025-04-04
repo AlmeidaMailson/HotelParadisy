@@ -1,0 +1,192 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    /* Estilos gerais do corpo da página */
+    body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color:beige;
+    }
+    /* Estilos do cabeçalho */
+    .header {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    }
+    /* Estilo do logo */
+    .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    .banner{
+        height: 50vh;
+        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                    url('https://images.unsplash.com/photo-1455587734955-081b22074882') center/cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+    }
+    /* Conteúdo do banner */
+    .banner-content {
+        padding: 2rem;
+    }
+    .banner-content h2 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    .btn-reserva {
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    .btn-reserva:hover {
+        background-color: #ffed4a;
+        height: 4rem;
+        width: 10rem;
+    }
+    .filtro-container {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    
+    .filtro-container select {
+        padding: 0.5rem;
+        font-size: 1rem;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+    }
+
+    .view-options {
+        text-align: center;
+        margin-bottom: 1rem;
+
+    }
+
+    .view-options button{
+        height: 40px;
+        width: 60px;
+    }
+
+    .quartosLuxo-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin: 0 auto;
+        opacity: 10px;
+        font-size: 0.80rem;
+
+    }
+
+    .quartosLuxo-grid img{
+        width: 250px;
+        height: 350px;
+        object-fit: cover;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        background-color: white;
+    }
+    .quartosLuxo-grid p{
+        text-align: justify;
+        line-height: 1.8;
+        margin-bottom: 3rem;
+    }
+
+
+    .lista-view{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .lista-view .Luxo-card{
+        display: grid;
+        grid-template-columns: 200px auto; 
+        flex-direction: row;
+        align-items: center;
+        gap: 10rem;
+        padding: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        background-color: white;
+
+    }
+
+    .quarto-precos{
+            color: #1a1a1a;
+            font-weight: bold;
+            font-size: 1rem;
+            margin-top: 0 auto;
+    }
+
+    .quarto-precos button{
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 3rem;
+        border: 40%;
+        background-color: #333;
+        color: #ddd;
+        width: 170px;
+        height: 50px;
+
+    }
+    .quarto-precos p{
+        margin-bottom: 1rem;
+
+    }
+
+    .linha {
+        display: flex;
+        gap: 15px; /* Controla o espaço entre as palavras */
+    }
+
+    .linha span{
+        border: #ffed4a solid;
+        background-color: #333;
+        color: #ddd;
+    }
+    .footer {
+        background-color: #1a1a1a;
+        color: white;
+        text-align: center;
+        padding: 2rem;
+    }
+    /* Media queries para responsividade */
+    @media (max-width: 768px) {
+        .header {
+            flex-direction: column;
+            text-align: center;
+        }
+        .nav {
+            margin-top: 1rem;
+        }
+        .nav a {
+            margin: O.5rem;
+        }
+        .banner-content h2 {
+            font-size: 2rem;
+        }
+        .datas-container {
+            grid-template-columns: 1fr;
+        }
+    }
